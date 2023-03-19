@@ -1,0 +1,587 @@
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+main, article, aside, figure, footer, header, nav, section, details, summary {display: block;}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: separate; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+    white-space: pre; /* CSS2 */
+    white-space: pre-wrap; /* CSS 2.1 */
+    white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom;}
+.ie7 input[type="checkbox"] {vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+
+small {font-size: 85%;}
+
+strong {font-weight: bold;}
+
+td, td img {vertical-align: top;}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {width: auto; overflow: visible;}
+
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+.clearfix:after { content: " "; display: block; clear: both; }
+
+/*Reset Style Complete*/
+
+
+
+body{
+font-family: 'Montserrat', sans-serif;
+flex-basis: 950px;
+}
+
+.container{
+	width: 1170px;
+	margin: 0 auto;
+}
+
+.main-banner{
+	background-image: url('../img/burger-img.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+.main-banner-text{
+	padding: 90px 0 100px 0;
+}
+
+/* Header Start */
+
+.header{
+	padding-top: 60px;
+
+
+}
+
+.header .container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center; 
+}
+
+.header .container .menu{
+	font-size: 45px;
+    font-weight: 400;
+}
+
+ul.navigation-menu{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 45px;
+	text-transform: uppercase;
+
+
+}
+
+ul.navigation-menu li a{
+	text-decoration: none;
+	font-size: 16px;
+	color: #ffffff;
+	font-weight: 400;
+	font-size: 16px;
+}
+
+/* Header End */
+
+/* main banner start */
+
+.main-banner-text h1{
+	font-size: 91px;
+	color: #ffffff;
+	margin-bottom: 56px;
+}
+
+.main-banner-text P{
+	font-size: 32px;
+	color: #d3d3d3;
+	margin-bottom: 61px;
+}
+
+.main-banner a.main-banner-button{
+	text-decoration: none;
+	border: 3px solid #f64b3c;
+	padding: 25px 72px;
+	border-radius: 50px;
+	outline: 0;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	background-color: #f64b3c;
+	color: #ffffff;
+	margin-bottom: 105px
+}
+
+/* main banner end */
+
+/* introduction start */
+
+.introduction{
+	background-image: url(../img/burger-intro.jpg);
+}
+
+.chef-introduction{
+	padding-top: 92px;
+	text-align: center;
+}
+
+.chef-introduction h2{
+	font-size: 64px;
+	color: #f64b3c;
+	font-weight: 400;
+	padding-bottom: 52px;
+}
+
+.chef-introduction p{
+	font-size: 26px;
+	color: #f64b3c;
+	padding-bottom: 73px;
+
+}
+
+.introdution-name{
+	display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.introdution-name h3{
+	margin-top: 23px;
+	margin-bottom: 26px;
+	font-size: 34px;
+	color: #f64b3c;
+	text-transform: uppercase;
+}
+
+.introdution-name p{
+	font-size: 25px;
+	color: #f64b3c;
+	margin-bottom: 145px;
+}
+
+.bold-name h3{
+	font-weight: bold;
+}
+
+
+/* introduction end */
+
+/* burger start */
+
+.burger{
+	background-color: #f64b3c;
+}
+
+.burger .container{
+	display: flex;
+    justify-content: space-between;
+    gap: 137px;
+    align-items: center;
+}
+
+.best-burger-image{
+	margin-top: 167px;
+	margin-bottom: 147px;
+
+}
+
+.best-burger-content h4{
+	font-size: 75px;
+	margin-top: 246px;
+	margin-bottom: 67px;
+	color: #ffffff;
+}
+
+.best-burger-content p{
+	font-size: 30px;
+	margin-bottom: 73px;
+	color: #ffffff;
+}
+
+
+.best-burger-content a.burger{
+	text-decoration: none;
+	border: 3px solid #ffffff;
+	padding: 22px 75px;
+	border-radius: 50px;
+	outline: 0;
+	display: inline-block;
+	font-size: 16px;
+	font-weight: 700;
+	background-color: #ffffff;
+	color: #f64b3c;
+	margin-bottom: 200px
+}
+
+/* burger end */
+
+/* big-burger start */
+
+.promotion{
+	background-image: url(../img/burger-1.jpg);
+	background-size: contain;
+}
+
+.promotion .container{
+	display: flex;
+	justify-content: space-between;
+	gap: 110px;
+	align-items: center;
+}
+
+.big-burger-content h5{
+	font-size: 75px;
+	color: #f64b3c;
+	margin-top: 256px;
+	margin-bottom: 53px;
+}
+
+.big-burger-content p{
+	font-size: 30px;
+	color: #f64b3c;
+	margin-bottom: 72px;
+}
+
+
+.big-burger-content a.big-burger{
+	text-decoration: none;
+	border: 3px solid #f64b3c;
+	padding: 25px 75px;
+	border-radius: 50px;
+	outline: 0;
+	display: inline-block;
+	font-size: 25px;
+	background-color: #f64b3c;
+	font-weight: bold;
+	color: #ffffff;
+	margin-bottom: 202px
+}
+
+.big-burger-image{
+	margin-top: 180px;
+	margin-bottom: 145px;
+}
+
+/* big-burger end */
+
+/* Statistics start */
+
+.statistics{
+	background-color: #f64b3c;
+}
+
+.statistics .container{
+	padding-top: 92px;
+	text-align: center;
+}
+
+.statistics-text h6{
+	font-size: 63px;
+	margin-top: 93px;
+	margin-bottom: 40px;
+	color: #ffffff;
+}
+
+.statistics-text p{
+	font-size: 25px;
+	color: #ffffff;
+	margin-bottom: 66px;
+} 
+
+.likes{
+	display: flex;
+   justify-content: space-between;
+   text-align: center;
+}
+
+.likes-text{
+	border: 4px solid #ffffff;
+	height: 300px;
+	width: 300px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin-bottom: 185px;
+}
+
+.likes-text h6{
+	font-size: 102px;
+	color: #ffffff;
+}
+
+.likes-text p{
+	font-size: 34px;
+	color: #ffffff;
+}
+
+/* Statistics end */
+
+/* Barry Henderson start */
+
+.Henderson{
+	padding-top: 295px;
+	padding-bottom: 260px;
+	background-image: url(../img/salad-2.jpg);
+	background-size: cover;
+}
+
+.Henderson .container{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.Henderson .container .Barry-Henderson{
+	width: 80%;
+}
+
+.Barry-Henderson h6{
+	margin-bottom: 130px;
+	font-size: 37px;
+	color: #ffffff;
+}
+
+.Barry-Henderson p{
+	font-size: 45px;
+	color: #ffffff;
+}
+
+/* Barry Henderson end */
+
+/* update start */
+
+.update{
+	padding-top: 250px;
+	padding-bottom: 245px;
+	background-image: url(../img/burger-3.jpg);
+	background-size: contain;
+}
+
+.update .container{
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+.update .container .our-update{
+	width: 80%;
+}
+
+.our-update h6{
+	font-size: 75px;
+	color: #f64b3c;
+	margin-bottom: 56px;
+}
+
+.our-update p{
+	font-size: 30px;
+	color: #f68275;
+	margin-bottom: 85px;
+}
+
+.subscribe-form{
+	display: flex;
+}
+
+.subscribe-form #email{
+	background-color: #FFF;
+	height: 68px;
+	padding: 10px 30px;
+	border: none;
+	border-radius: 50px 0 0 50px;
+	flex-grow: 1;
+	color: #835e3f;
+}
+
+.subscribe-form #email::-webkit-input-placeholder { /* Edge */
+  opacity:0.4;
+}
+
+.subscribe-form #email:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  opacity:0.4;
+}
+
+.subscribe-form #email::placeholder {
+  opacity:0.4;
+}
+
+.subscribe-form #Subscribe{
+	background-color: #f64b3c;
+	height: 68px;
+	padding: 10px 30px;
+	border: none;
+	border-radius:  0 50px 50px 0;
+	color: #FFF;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+/* update end */
+
+/* footer start */
+
+.footer{
+	padding-top: 258px;
+	padding-bottom: 257px;
+	background-color: #222222;
+}
+
+.footer .footer-container{
+	display: flex;
+	justify-content: space-between;
+	gap: 175px;
+}
+
+.footer-text{
+	flex-basis: 40%;
+}
+
+.footer-about{
+	flex-basis: 25%;
+	font-size: 32px;
+	color: #d4d4d4;
+}
+
+.footer-services{
+	flex-basis: 25%;
+	font-size: 32px;
+	color: #d4d4d4;
+}
+
+.footer-other{
+	flex-basis: 10%;
+	font-size: 32px;
+	color: #d4d4d4;
+}
+
+.footer-text h6{
+	font-size: 32px;
+	margin-bottom: 37px;
+	color: #ffffff;
+}
+
+.footer-text p{
+	font-size: 24px;
+	margin-bottom: 37px;
+	color: #d4d4d4;
+}
+
+.logo-img{
+	display: flex;
+	gap: 18px;
+}	
+
+
+/* footer end */
